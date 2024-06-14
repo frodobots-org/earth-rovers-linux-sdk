@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  app:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: frodobot-sdk-1
+    volumes:
+      - .:/app
+    command: bash -c './sdk/frodobots-sdk-1 "$CHANNEL_NAME" "$RTM_TOKEN" "$RTC_TOKEN" "$USERID"'
+    stdin_open: true
+    tty: true
+    ports:
+      - 3535:3535/udp
+    environment:
+      - CHANNEL_NAME=${CHANNEL_NAME}
+      - RTM_TOKEN=${RTM_TOKEN}
+      - RTC_TOKEN=${RTC_TOKEN}
+      - USERID=${USERID}
+
