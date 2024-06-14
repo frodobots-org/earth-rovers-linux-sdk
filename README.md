@@ -3,14 +3,13 @@
 This SDK allows you to set up a UDP server on port 3535 to communicate with the bot. It also generates a `test.h264` file in the root directory, where you can monitor the movements of your bot.
 
 ## Constraints
-In order to use or run this SDK you need to have an account registered with
+In order to use or run this SDK you need to have an account registered with Frodobots. This is meant for research purposes, reach to us here: [Frodobots Discord](https://discord.com/invite/AUegJCJwyb)
 
 ## Quick Start with Docker
 
 1. **Clone the repository**
 
    git clone <repository_url>
-
 
 2. **Create a .env file in the root directory**
 
